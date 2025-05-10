@@ -25,7 +25,7 @@ def init_connection():
 
         username = urllib.parse.quote_plus(raw_user)
         password = urllib.parse.quote_plus(raw_pass)
-        uri = f"mongodb+srv://pierrebrand10:KswuAAa51mCHi8pb@cluster0.mongodb.net/?retryWrites=true&w=majority"
+        uri = f"mongodb+srv://pierrebrand10:KswuAAa51mCHi8pb@cluster0.1upba3y.mongodb.net/?retryWrites=true&w=majority"
         client = MongoClient(uri)
         client.admin.command("ping")
         return client
