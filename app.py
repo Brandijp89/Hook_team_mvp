@@ -25,7 +25,7 @@ def init_connection():
 
         username = urllib.parse.quote_plus(raw_user)
         password = urllib.parse.quote_plus(raw_pass)
-        uri = f"mongodb+srv://{username}:{password}@cluster0.mongodb.net/?retryWrites=true&w=majority"
+        uri = f"mongodb+srv://pierrebrand10:KswuAAa51mCHi8pb@cluster0.mongodb.net/?retryWrites=true&w=majority"
         client = MongoClient(uri)
         client.admin.command("ping")
         return client
@@ -34,7 +34,7 @@ def init_connection():
         return None
 
 client = init_connection()
-collection = client["succession_ai"]["business_data"] if client else None
+collection = client["Succession_ai_mvp"]["business_data"] if client else None
 
 # OpenAI config
 openai.api_key = os.getenv("OPENAI_API_KEY")
